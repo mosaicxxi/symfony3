@@ -1,0 +1,6 @@
+admin_homepage:
+    path:     /
+    defaults: { _controller: AdminBundle:Default:index }
+lucky:
+    path:     /lucky
+    defaults: { _controller: AdminBundle:Lucky:show }
