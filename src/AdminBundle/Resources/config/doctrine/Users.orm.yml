@@ -1,0 +1,29 @@
+AdminBundle\Entity\Users:
+    type: entity
+    table: null
+    repositoryClass: AdminBundle\Repository\UsersRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        login:
+            type: string
+            length: 255
+        pass:
+            type: string
+            length: 255
+        fIO:
+            type: string
+            length: 255
+            column: FIO
+        dtCreate:
+            type: datetime
+            column: dt_create
+    oneToMany:
+        emailsItem:
+          targetEntity: Emails
+          mappedBy: userItem
+          onDelete: CASCADE

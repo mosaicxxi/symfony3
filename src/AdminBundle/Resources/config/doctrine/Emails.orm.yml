@@ -1,0 +1,27 @@
+AdminBundle\Entity\Emails:
+    type: entity
+    table: null
+    repositoryClass: AdminBundle\Repository\EmailsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        emails:
+            type: string
+            length: 255
+        num:
+            type: string
+            length: 255
+        num:
+            type: integer
+    manyToOne:
+        userItem:
+          targetEntity: Users
+          inversedBy: emailsItem
+          joinColumn:
+            name: user_id
+            referencedColumnName: id
+            nullable: false
