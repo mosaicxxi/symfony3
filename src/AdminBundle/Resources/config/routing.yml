@@ -1,3 +1,9 @@
+admin_users:
+    resource: "@AdminBundle/Resources/config/routing/users.yml"
+    prefix:   /users
+admin_emails:
+    resource: "@AdminBundle/Resources/config/routing/emails.yml"
+    prefix:   /emails
 admin_homepage:
     path:     /
     defaults: { _controller: AdminBundle:Default:index }

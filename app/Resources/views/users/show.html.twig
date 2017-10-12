@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>User</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Login</th>
+                <td>{{ user.login }}</td>
+            </tr>
+            <tr>
+                <th>Pass</th>
+                <td>{{ user.pass }}</td>
+            </tr>
+            <tr>
+                <th>Fio</th>
+                <td>{{ user.fIO }}</td>
+            </tr>
+            <tr>
+                <th>Dtcreate</th>
+                <td>{% if user.dtCreate %}{{ user.dtCreate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('users_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

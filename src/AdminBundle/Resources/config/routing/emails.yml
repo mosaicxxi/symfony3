@@ -1,0 +1,12 @@
+emails_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:Emails:index" }
+    methods:  GET
+
+emails_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:Emails:show" }
+    methods:  GET
+
+
+

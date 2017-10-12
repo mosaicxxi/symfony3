@@ -1,0 +1,12 @@
+users_index:
+    path:     /
+    defaults: { _controller: "AdminBundle:Users:index" }
+    methods:  GET
+
+users_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdminBundle:Users:show" }
+    methods:  GET
+
+
+
